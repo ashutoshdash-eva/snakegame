@@ -79,11 +79,13 @@ const board = new THREE.Mesh(boardGeo, boardMat);
 board.rotation.x = -Math.PI / 2;
 board.position.z = -0.5;
 board.position.y = -1.5;
+board.position.x = -0.5;
 scene.add(board);
 
 const grid = new THREE.GridHelper(gridSize, gridSize, 0x444444, 0x222222);
 grid.position.y = -1; 
 grid.position.z = -0.5;
+grid.position.x = -0.5;
 scene.add(grid);
 
 const scoreElement = document.getElementById('score');
