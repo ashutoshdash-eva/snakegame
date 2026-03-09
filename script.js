@@ -39,13 +39,13 @@ const foodGeo = new THREE.SphereGeometry(0.45, 32, 32);
 
 const textureLoader = new THREE.TextureLoader();
 
-const colorMap = textureLoader.load('/textures/Color.png');
+const colorMap = textureLoader.load('/textures/col.png');
 colorMap.colorSpace = THREE.SRGBColorSpace; // Crucial: Keeps the colors from looking washed out
 
-const normalMap = textureLoader.load('/textures/NormalGL.png');
-const roughnessMap = textureLoader.load('/textures/Roughness.png');
-const displacementMap = textureLoader.load('/textures/Displacement.png');
-const aoMap = textureLoader.load('/textures/AmbientOcclusion.png');
+const normalMap = textureLoader.load('/textures/norgl.png');
+const roughnessMap = textureLoader.load('/textures/roug.png');
+const displacementMap = textureLoader.load('/textures/dis.png');
+const aoMap = textureLoader.load('/textures/ao.png');
 
 const boardMat = new THREE.MeshStandardMaterial({
     map: colorMap,
