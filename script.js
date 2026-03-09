@@ -39,13 +39,13 @@ const foodGeo = new THREE.SphereGeometry(0.45, 32, 32);
 
 const textureLoader = new THREE.TextureLoader();
 
-const colorMap = textureLoader.load('textures/Color.png');
+const colorMap = textureLoader.load('/textures/Color.png');
 colorMap.colorSpace = THREE.SRGBColorSpace; // Crucial: Keeps the colors from looking washed out
 
-const normalMap = textureLoader.load('textures/NormalGL.png');
-const roughnessMap = textureLoader.load('textures/Roughness.png');
-const displacementMap = textureLoader.load('textures/Displacement.png');
-const aoMap = textureLoader.load('textures/AmbientOcclusion.png');
+const normalMap = textureLoader.load('/textures/NormalGL.png');
+const roughnessMap = textureLoader.load('/textures/Roughness.png');
+const displacementMap = textureLoader.load('/textures/Displacement.png');
+const aoMap = textureLoader.load('/textures/AmbientOcclusion.png');
 
 const boardMat = new THREE.MeshStandardMaterial({
     map: colorMap,
@@ -58,21 +58,21 @@ const boardMat = new THREE.MeshStandardMaterial({
 })
 
 const snakeMat = new THREE.MeshStandardMaterial({
-    map: textureLoader.load("./textures/snake/color.png"),
+    map: textureLoader.load("/textures/snake/color.png"),
     colorSpace: THREE.SRGBColorSpace,
-    normalMap: textureLoader.load("./textures/snake/normal.png"),
-    roughnessMap: textureLoader.load("./textures/snake/roughness.png"),
-    aoMap: textureLoader.load("./textures/snake/ao.png"),
-    displacementMap: textureLoader.load("./textures/snake/displacement.png"),
+    normalMap: textureLoader.load("/textures/snake/normal.png"),
+    roughnessMap: textureLoader.load("/textures/snake/roughness.png"),
+    aoMap: textureLoader.load("/textures/snake/ao.png"),
+    displacementMap: textureLoader.load("/textures/snake/displacement.png"),
     displacementScale: 0.01,
 })
 
 const foodMat = new THREE.MeshStandardMaterial({ 
-    map: textureLoader.load("./textures/food/color.png"),
+    map: textureLoader.load("/textures/food/color.png"),
     colorSpace: THREE.SRGBColorSpace,
-    normalMap: textureLoader.load("./textures/food/normal.png"),
-    roughnessMap: textureLoader.load("./textures/food/roughness.png"),
-    aoMap: textureLoader.load("./textures/food/ao.png"),
+    normalMap: textureLoader.load("/textures/food/normal.png"),
+    roughnessMap: textureLoader.load("/textures/food/roughness.png"),
+    aoMap: textureLoader.load("/textures/food/ao.png"),
 });
 
 const board = new THREE.Mesh(boardGeo, boardMat);
